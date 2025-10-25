@@ -61,7 +61,13 @@ JavaChatX/
 │   │   └── feature_request.md
 │   ├── PULL_REQUEST_TEMPLATE.md
 │   └── workflows/
-│       └── java-ci.yml
+│       ├── java-ci.yml
+│       ├── security-scan.yml
+│       ├── docs-deployment.yml
+│       ├── code-format.yml
+│       ├── performance-test.yml
+│       ├── dependency-update.yml
+│       └── release.yml
 ├── src/
 │   ├── main/
 │   │   ├── java/
@@ -128,6 +134,18 @@ To run all code quality checks:
 mvn verify
 ```
 
+## 🔄 Continuous Integration & Deployment
+
+JavaChatX uses GitHub Actions for continuous integration and deployment:
+
+- **Java CI**: Builds and tests the project on multiple Java versions
+- **Security Scan**: Runs CodeQL analysis and dependency review
+- **Documentation Deployment**: Automatically generates and deploys Javadoc to GitHub Pages
+- **Code Formatting**: Ensures consistent code style with Google Java Format
+- **Performance Testing**: Runs performance benchmarks
+- **Dependency Updates**: Checks for outdated dependencies weekly
+- **Release**: Automatically creates GitHub releases and packages JAR files
+
 ## 🤝 Contributing
 
 - Fork repo, create feature branch, submit PR.
@@ -147,4 +165,4 @@ MIT License (c) 2025 TechCognita Community
 - Discord: *coming soon*
 - Twitter: @TechCognita
 - Email: community@techcognita.com
-- Maintainer: Atharv Shinde ([GitHub](https://github.com/atharvshinde))
+- Maintainer: Atharv Shinde ([GitHub](https://github.com/AtharvShinde2004))
