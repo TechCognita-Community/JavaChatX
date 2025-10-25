@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.techcognita.javachatx"},{"l":"com.techcognita.javachatx.agent"},{"l":"com.techcognita.javachatx.api"},{"l":"com.techcognita.javachatx.chat"},{"l":"com.techcognita.javachatx.context"},{"l":"com.techcognita.javachatx.plugin"}];updateSearchResults();
