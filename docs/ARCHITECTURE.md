@@ -62,6 +62,17 @@ JavaChatX uses several design patterns to ensure maintainability and extensibili
 4. **Plugins** - Extend `BasePlugin` or implement `Plugin`
 5. **Context Managers** - Implement `ContextManager` for custom context handling
 
+## Code Quality
+
+The project maintains high code quality standards through automated tools:
+
+- **Checkstyle**: Ensures consistent code formatting
+- **JaCoCo**: Monitors test coverage
+- **SonarCloud**: Provides comprehensive code analysis
+- **Codecov**: Tracks code coverage metrics
+
+For more details, see [Code Quality Documentation](CODE_QUALITY.md).
+
 ## Future Enhancements
 
 1. **Web Dashboard** - REST API and web interface for managing agents

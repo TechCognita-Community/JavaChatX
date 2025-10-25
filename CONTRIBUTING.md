@@ -37,6 +37,25 @@ There are many ways you can contribute to JavaChatX:
 - Run existing tests before submitting changes: `mvn test`
 - Ensure all tests pass before submitting a pull request
 
+## 🔍 Code Quality
+
+We maintain high code quality standards through automated tools:
+
+- **Checkstyle**: Code must pass Checkstyle validation
+- **Test Coverage**: New code should maintain or improve test coverage
+- **Code Analysis**: SonarCloud analysis should show no critical issues
+
+To run all quality checks locally:
+
+```bash
+mvn verify
+```
+
+This will execute:
+1. Checkstyle validation
+2. Unit tests
+3. Code coverage analysis
+
 ## 📚 Documentation
 
 - Update README.md if you change functionality

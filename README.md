@@ -1,5 +1,12 @@
 # 💬 JavaChatX
 
+[![Build](https://github.com/TechCognita-Community/JavaChatX/actions/workflows/java-ci.yml/badge.svg)](https://github.com/TechCognita-Community/JavaChatX/actions)
+[![GitHub issues](https://img.shields.io/github/issues/TechCognita-Community/JavaChatX)](https://github.com/TechCognita-Community/JavaChatX/issues)
+[![GitHub stars](https://img.shields.io/github/stars/TechCognita-Community/JavaChatX)](https://github.com/TechCognita-Community/JavaChatX/stargazers)
+[![GitHub license](https://img.shields.io/github/license/TechCognita-Community/JavaChatX)](https://github.com/TechCognita-Community/JavaChatX/blob/main/LICENSE)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=TechCognita-Community_JavaChatX&metric=alert_status)](https://sonarcloud.io/dashboard?id=TechCognita-Community_JavaChatX)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=TechCognita-Community_JavaChatX&metric=coverage)](https://sonarcloud.io/dashboard?id=TechCognita-Community_JavaChatX)
+
 Open-source AI Agent Development Framework built in Java.  
 Build custom agents, integrate with APIs (OpenAI, Gemini, Hugging Face), manage context, and automate workflows.
 
@@ -106,6 +113,20 @@ mvn clean install
 
 ```bash
 mvn exec:java -Dexec.mainClass="com.techcognita.javachatx.JavaChatXApplication"
+```
+
+### Code Quality Checks
+
+The project uses several code quality tools:
+
+- **Checkstyle**: Ensures code follows standard Java conventions
+- **JaCoCo**: Measures test coverage
+- **SonarCloud**: Provides comprehensive code quality analysis
+
+To run all code quality checks:
+
+```bash
+mvn verify
 ```
 
 ## 🤝 Contributing
