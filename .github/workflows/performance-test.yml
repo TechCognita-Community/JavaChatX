@@ -13,10 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Java
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           java-version: "17"
           distribution: "temurin"
@@ -27,11 +27,11 @@ jobs:
           # Placeholder for performance tests
           # You would implement actual performance tests here
           echo "Running performance tests..."
-          mvn test -Dtest=PerformanceTest
+          mvn test
 
       - name: Publish performance results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: always()
         with:
           name: performance-results
-          path: target/performance-results/
+          path: target/surefire-reports/
