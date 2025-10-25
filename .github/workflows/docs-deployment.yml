@@ -20,7 +20,8 @@ jobs:
           cache: maven
 
       - name: Generate Javadoc
-        run: mvn javadoc:javadoc
+        run: |
+          mvn clean compile javadoc:javadoc
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
