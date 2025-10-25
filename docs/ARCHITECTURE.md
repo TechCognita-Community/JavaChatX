@@ -4,6 +4,8 @@
 
 JavaChatX follows a modular architecture that allows developers to build, train, and deploy intelligent conversational agents. The framework is designed to be extensible and maintainable, with clearly defined interfaces between components.
 
+For a complete list of documentation resources, see the [Documentation Index](INDEX.md).
+
 ## Core Components
 
 ### 1. Agent Module

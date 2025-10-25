@@ -1,0 +1,37 @@
+name: Dependency Update Check
+
+on:
+  schedule:
+    - cron: "0 4 * * 1" # Weekly on Mondays at 4 AM
+  workflow_dispatch:
+
+jobs:
+  dependency-update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Java
+        uses: actions/setup-java@v3
+        with:
+          java-version: "17"
+          distribution: "temurin"
+
+      - name: Check for dependency updates
+        run: |
+          # Use versions-maven-plugin to check for updates
+          mvn versions:display-dependency-updates
+          mvn versions:display-plugin-updates
+
+      - name: Create issue if updates available
+        if: failure()
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: 'Dependency updates available',
+              body: 'New versions of dependencies are available. Please review and update.'
+            })

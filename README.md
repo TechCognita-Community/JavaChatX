@@ -6,6 +6,8 @@
 [![GitHub license](https://img.shields.io/github/license/TechCognita-Community/JavaChatX)](https://github.com/TechCognita-Community/JavaChatX/blob/main/LICENSE)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=TechCognita-Community_JavaChatX&metric=alert_status)](https://sonarcloud.io/dashboard?id=TechCognita-Community_JavaChatX)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=TechCognita-Community_JavaChatX&metric=coverage)](https://sonarcloud.io/dashboard?id=TechCognita-Community_JavaChatX)
+[![Security](https://github.com/TechCognita-Community/JavaChatX/actions/workflows/security-scan.yml/badge.svg)](https://github.com/TechCognita-Community/JavaChatX/actions/workflows/security-scan.yml)
+[![Documentation](https://github.com/TechCognita-Community/JavaChatX/actions/workflows/docs-deployment.yml/badge.svg)](https://github.com/TechCognita-Community/JavaChatX/actions/workflows/docs-deployment.yml)
 
 Open-source AI Agent Development Framework built in Java.  
 Build custom agents, integrate with APIs (OpenAI, Gemini, Hugging Face), manage context, and automate workflows.

@@ -1,0 +1,33 @@
+name: Code Formatting
+
+on:
+  push:
+    branches: [develop]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Java
+        uses: actions/setup-java@v3
+        with:
+          java-version: "17"
+          distribution: "temurin"
+
+      - name: Format Java code
+        run: |
+          curl -L -o google-java-format.jar https://github.com/google/google-java-format/releases/download/v1.15.0/google-java-format-1.15.0-all-deps.jar
+          find . -type f -name "*.java" -exec java -jar google-java-format.jar --replace {} +
+
+      - name: Check for formatting changes
+        run: |
+          if ! git diff --quiet; then
+            echo "Code formatting changes detected. Please run google-java-format locally before committing."
+            git diff
+            exit 1
+          fi
