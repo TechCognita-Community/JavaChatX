@@ -37,6 +37,7 @@ hs_err_pid*
 
 # Maven
 target/
+!target/site/apidocs/
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
