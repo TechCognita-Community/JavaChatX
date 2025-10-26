@@ -104,35 +104,102 @@ JavaChatX/
 
 ## 🚀 Getting Started
 
-### Prerequisites
+### Step 1: Verify Prerequisites
 
-- Java 17 or higher
-- Maven 3.6 or higher
+Ensure you have the following installed:
 
-### Building the Project
+- **Java 17+**: Check your version with `java -version`
+- **Maven 3.6+**: Verify with `mvn -version`
+
+#### Quick Install (if needed):
+- **Java**: Download from [adoptium.net](https://adoptium.net/) or use your package manager
+- **Maven**: Install via [maven.apache.org](https://maven.apache.org/download.cgi) or `brew install maven` (macOS)
+
+### Step 2: Clone the Repository
+
+```bash
+git clone https://github.com/TechCognita-Community/JavaChatX.git
+cd JavaChatX
+```
+
+### Step 3: Build the Project
+
+Build and install dependencies:
 
 ```bash
 mvn clean install
 ```
 
-### Running the Application
+This will:
+- Download dependencies
+- Compile the source code
+- Run unit tests
+- Install the project to your local Maven repository
+
+**Expected output**: You should see `BUILD SUCCESS` at the end.
+
+### Step 4: Run Example Applications
+
+Try out the examples to see JavaChatX in action:
 
 ```bash
-mvn exec:java -Dexec.mainClass="com.techcognita.javachatx.JavaChatXApplication"
+# Run the basic agent example
+mvn exec:java -Dexec.mainClass="com.techcognita.javachatx.examples.basic.BasicAgentExample"
+
+# Run the context agent example
+mvn exec:java -Dexec.mainClass="com.techcognita.javachatx.examples.context.ContextAgentExample"
 ```
 
-### Code Quality Checks
+### Step 5: Integrate into Your Project
 
-The project uses several code quality tools:
+Add JavaChatX as a dependency to your `pom.xml`:
+
+```xml
+<dependency>
+    <groupId>com.techcognita</groupId>
+    <artifactId>javachatx</artifactId>
+    <version>1.0.0</version>
+</dependency>
+```
+
+### Running Code Quality Checks
+
+JavaChatX uses several code quality tools:
 
 - **Checkstyle**: Ensures code follows standard Java conventions
 - **JaCoCo**: Measures test coverage
 
-To run all code quality checks:
+To run all quality checks:
 
 ```bash
 mvn verify
 ```
+
+To run specific checks:
+
+```bash
+# Run Checkstyle
+mvn checkstyle:check
+
+# Generate test coverage report
+mvn jacoco:report
+# View report at target/site/jacoco/index.html
+```
+
+### Troubleshooting
+
+**Build fails with "Compilation error"**
+- Ensure Java 17+ is being used: `mvn -version` shows Java version
+- Try: `mvn clean install -U` (forces dependency updates)
+
+**Example doesn't run**
+- Check that the example class exists in the `examples/` directory
+- Verify the class name matches: `mvn exec:java -Dexec.mainClass="..."`
+
+**Need more help?**
+- Check the [documentation](docs/INDEX.md) for detailed guides
+- See [examples](examples/) folder for more code samples
+- Open an issue on [GitHub](https://github.com/TechCognita-Community/JavaChatX/issues)
 
 ## 🔄 Continuous Integration & Deployment
 
